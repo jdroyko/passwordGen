@@ -3,13 +3,14 @@
 function initPrompt() {
   var setLength = prompt("Please enter the amount of characters required between 8 and 128. "); // WHy won't the 'set length' here become a variable?
 }
+//How to make it that everytime the button is clicked? addEventListener?
 // //*****All this code is happening at refresh before button press*****
 var upperCase = confirm("Do you want uppercase letters?");
 var lowerCase = confirm("Do you want lowercase letters?");
 var numbers = confirm("Do you want numbers?");
 var symbols = confirm("Do you want symbols?");
 
-var setLength = 12
+var setLength = "";
 //*****This is a made up number to test the setLength and will be deleted when the code works*****
 
 if (setLength < 8 || setLength > 128) {
