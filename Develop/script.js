@@ -1,95 +1,86 @@
-/*
-Homework questions: 
--- where do I put in the loop to get the functions to keep running until it reaches the amount of characters required? 
--- 
-*/
+//Step 1: When on click, should prompt how many characters, should it have numbers etc.
 
-/*Ask for lenght required of the password
-
-Criteria:
-WHEN prompted for the length of the password
-THEN I choose a length of at least 8 characters and no more than 128 characters 
-
-WHEN I click the button to generate a password
-THEN I am presented with a series of prompts for password criteria
-*/
-
-//When the button is pressed
 function initPrompt() {
-  let passwordLength = prompt("Please password character length between 8 and 128.");
+  var setLength = prompt("Please enter the amount of characters required between 8 and 128. "); // WHy won't the 'set length' here become a variable?
 }
-var upperCase = confirm("Do you want Uppercase?")
+// //*****All this code is happening at refresh before button press*****
+var upperCase = confirm("Do you want uppercase letters?");
+var lowerCase = confirm("Do you want lowercase letters?");
+var numbers = confirm("Do you want numbers?");
+var symbols = confirm("Do you want symbols?");
 
-var lowerCase = confirm("Do you want Uppercase?")
+var setLength = 12
+//*****This is a made up number to test the setLength and will be deleted when the code works*****
+
+if (setLength < 8 || setLength > 128) {
+  prompt("Error.Please enter the amount of characters required between 8 and 128. ");
+}
 
 
-//Boolean for the rest of the requirements
-// var wantsLower = prompt("Include Lower case? Y or N.");
 
-// if ("Y") {
-//   //Random Lowercase Letters
-//   //Browser Character set 97-122
-//   function getRandLower() {
-//     return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
-//   }
-// } if (wantsLower !== "Y" || "N") {
-//   prompt("Error. Include Lower case? Y or N.");
+
+//Step 2: Take the information given and store that information given above to make a password
+
+if (upperCase === true) {
+  //Random Uppercase Letters
+  //Browser Character set 65-90
+  function getRandUpper() {
+    return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
+  }
+}
+
+if (lowerCase === true) {
+  //Random Lowercase Letters
+  //Browser Character set 97-122
+  function getRandLower() {
+    return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
+  }
+}
+
+if (numbers === true) {
+  //Random Numbers 
+  //Browser Character set 48-57
+  function getRandNumber() {
+    return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
+  }
+}
+
+if (symbols === true) {
+  //Random Symbols 
+  //Browser Character set 48-57
+  function getRandSymbols() {
+    const symbols = '!@#$%^&*(){}[]=/.,';
+    return symbols[Math.floor(Math.random() * symbols.length)];
+  }
+}
+
+//testing to see if the randomizer code works -- it does
+console.log(getRandUpper(), getRandLower(), getRandSymbols(), getRandNumber())
+
+//loop? the number of times until the character reaches the amount that they wanted?
+
+//Testing if this spews out the password in the text area, it does but I'm not sure what number it's spewing out....
+document.getElementById('password').value = (getRandUpper(), getRandLower(), getRandSymbols(), getRandNumber())
+  ;
+
+//Step 3:
+
+
+
+
+// //Original Assigned code below// Assignment Code
+
+/*I think this code is supposed to call the button when it's clicked to play the function? */
+// var generateBtn = document.querySelector("#generate");
+
+// // Write password to the #password input
+// function writePassword() {
+//   var password = generatePassword();
+//   var passwordText = document.querySelector("#password");
+
+//   passwordText.value = password;
 
 // }
 
-
-// Assignment Code
-// var generateBtn = document.querySelector("#generate");
-
-//Create objects for the functions below
-const randFunc = {
-  lower: getRandLower,
-  upper: getRandUpper,
-  number: getRandNumber,
-  symbol: getRandSymbols
-};
-
-
-// For the Random code generator please see Browser Charcter Set
-
-//Random Lowercase Letters
-//Browser Character set 97-122
-function getRandLower() {
-  return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
-}
-
-//Random Uppercase Letters
-//Browser Character set 65-90
-function getRandUpper() {
-  return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
-}
-
-//Random Numbers 
-//Browser Character set 48-57
-function getRandNumber() {
-  return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
-}
-
-//Random Strings 
-//Browser Character set 48-57
-function getRandSymbols() {
-  const symbols = '!@#$%^&*(){}[]=/.,';
-  return symbols[Math.floor(Math.random() * symbols.length)];
-}
-
-console.log(getRandSymbols())
-
-
-//Codes below here were given
-// // Write password to the #password input
-function writePassword() {
-  var password = generatePassword(lower, upper, number, symbol);
-  var passwordText = document.querySelector("#password");
-
-  //   passwordText.value = password;
-
-  // }
-
-  // // Add event listener to generate button
-  generateBtn.addEventListener("click", writePassword);
-
+// // Add event listener to generate button
+// generateBtn.addEventListener("click", writePassword);
