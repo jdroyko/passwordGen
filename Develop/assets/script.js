@@ -34,6 +34,9 @@ function generatePassword() {
     symbol: getRandSymbols
   };
 
+  //**this loop doesn't work, but everything inside the loop works
+  for (i = 0; i<setLength +1;i++){
+
   if (upperCase === true) {
     //Random Uppercase Letters
     //Browser Character set 65-90
@@ -66,10 +69,7 @@ function generatePassword() {
       return symbols[Math.floor(Math.random() * symbols.length)];
     }
   }
-
-
-  //***loop? the number of times until the character reaches the amount that they wanted? Run the above functions until set lenght is received
-
+  }
 
 
   //testing to see if the randomizer code works -- it does
@@ -78,7 +78,7 @@ function generatePassword() {
 
 
   //Step 3: Display the value in the "password" text-area
-  return "word";
+  return "placeholder";
 }
 
 //Stubbing out the function, write return at the end of the function 
