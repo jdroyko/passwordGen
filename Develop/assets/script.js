@@ -1,9 +1,11 @@
 //Step 1: When on click, should prompt how many characters, should it have numbers etc.
+/* Acceptance Criteria:
+GIVEN I need a new, secure password
+WHEN I click the button to generate a password*/
 
 var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input 
-// **howcome the password is variable here but when try to do it with var promptit doesn't work as variable
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
@@ -15,11 +17,22 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
+
+// Acceptance Criteria: THEN I am presented with a series of prompts for password criteria
+/*WHEN prompted for the length of the password
+THEN I choose a length of at least 8 characters 
+and no more than 128 characters
+*/
+
 function generatePassword() {
   var setLength = prompt("Please enter the amount of characters required between 8 and 128. ");
   if (setLength < 8 || setLength > 128) {
     prompt("Error. Please enter the amount of characters required between 8 and 128. ");
   }
+
+  /*Acceptance Criteria: WHEN prompted for character types to include in the password
+THEN I choose lowercase, uppercase, numeric, and/or special characters*/
+
   var upperCase = confirm("Do you want uppercase letters?");
   var lowerCase = confirm("Do you want lowercase letters?");
   var numbers = confirm("Do you want numbers?");
