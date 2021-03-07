@@ -1,16 +1,7 @@
-Utilized https://www.youtube.com/watch?v=duNmhKgtcsI
+# Usage
+This homework was desigend to be used a Password Generator. The user can input their character requirements and the generator will output a random set of characters. This capability will be showcased once the button "Generate Password" is clicked. 
 
-https://www.youtube.com/watch?v=iKo9pDKKHnc
-
-https://dev.to/olawanle_joel/password-generator-with-javascript-57c
-
-https://www.youtube.com/watch?v=9sT03jEwcaw
-
-Generate characters to symbols, numbers, letters: 
-97-122 https://www.w3schools.com/html/html_charset.asp
-Represent letters of the alphabet and utilize Math.random
-
-Study Group: Joey Kouneski, Eric Cole, Ryan Scherr, Reginald Mace, Caitlin Bopp, Jashawn Stewart
+![Screenshot] (./images/Screenshot.PNG)
 
 ## User Story
 
@@ -41,4 +32,20 @@ THEN a password is generated that matches the selected criteria
 WHEN the password is generated
 THEN the password is either displayed in an alert or written to the page
 ```
+Utilized Sources:
 
+https://www.youtube.com/watch?v=duNmhKgtcsI
+
+https://www.youtube.com/watch?v=iKo9pDKKHnc
+
+https://dev.to/olawanle_joel/password-generator-with-javascript-57c
+
+https://www.youtube.com/watch?v=9sT03jEwcaw
+
+https://www.youtube.com/watch?v=MW1wz-PAOaE
+
+Generate characters to symbols, numbers, letters: 
+97-122 https://www.w3schools.com/html/html_charset.asp
+Represent letters of the alphabet and utilize Math.random
+
+Study Group: Joey Kouneski, Eric Cole, Ryan Scherr, Reginald Mace, Caitlin Bopp, Jashawn Stewart
