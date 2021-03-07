@@ -25,7 +25,7 @@ and no more than 128 characters
 */
 
 function generatePassword() {
-  var setLength = prompt("Please enter the amount of characters required between 8 and 128. ");
+    var setLength = prompt("Please enter the amount of characters required between 8 and 128. ");
   if (setLength < 8 || setLength > 128) {
     prompt("Error. Please enter the amount of characters required between 8 and 128. ");
   }
@@ -48,7 +48,7 @@ THEN I choose lowercase, uppercase, numeric, and/or special characters*/
   };
 
   //**this loop doesn't work, but everything inside the loop works
-  for (i = 0; i<setLength +1;i++){
+  for (i = 0; i<=setLength; i++){
 
   if (upperCase === true) {
     //Random Uppercase Letters
