@@ -25,7 +25,7 @@ and no more than 128 characters
 */
 
 function generatePassword() {
-    var setLength = prompt("Please enter the amount of characters required between 8 and 128. ");
+  var setLength = prompt("Please enter the amount of characters required between 8 and 128. ");
   if (setLength < 8 || setLength > 128) {
     prompt("Error. Please enter the amount of characters required between 8 and 128. ");
   }
@@ -48,40 +48,40 @@ THEN I choose lowercase, uppercase, numeric, and/or special characters*/
   };
 
   //**this loop doesn't work, but everything inside the loop works
-  for (i = 0; i<=setLength; i++){
+  for (i = 0; i <= setLength; i++) {
 
-  if (upperCase === true) {
-    //Random Uppercase Letters
-    //Browser Character set 65-90
-    function getRandUpper() {
-      return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
+    if (upperCase === true) {
+      //Random Uppercase Letters
+      //Browser Character set 65-90
+      function getRandUpper() {
+        return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
+      }
     }
-  }
 
-  if (lowerCase === true) {
-    //Random Lowercase Letters
-    //Browser Character set 97-122
-    function getRandLower() {
-      return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
+    if (lowerCase === true) {
+      //Random Lowercase Letters
+      //Browser Character set 97-122
+      function getRandLower() {
+        return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
+      }
     }
-  }
 
-  if (numbers === true) {
-    //Random Numbers 
-    //Browser Character set 48-57
-    function getRandNumber() {
-      return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
+    if (numbers === true) {
+      //Random Numbers 
+      //Browser Character set 48-57
+      function getRandNumber() {
+        return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
+      }
     }
-  }
 
-  if (symbols === true) {
-    //Random Symbols 
-    //Browser Character set 48-57
-    function getRandSymbols() {
-      const symbols = '!@#$%^&*(){}[]=/.,';
-      return symbols[Math.floor(Math.random() * symbols.length)];
+    if (symbols === true) {
+      //Random Symbols 
+      //Browser Character set 48-57
+      function getRandSymbols() {
+        const symbols = '!@#$%^&*(){}[]=/.,';
+        return symbols[Math.floor(Math.random() * symbols.length)];
+      }
     }
-  }
   }
 
 
@@ -94,11 +94,6 @@ THEN I choose lowercase, uppercase, numeric, and/or special characters*/
   return "placeholder";
 }
 
-//Stubbing out the function, write return at the end of the function 
-
-
-
-// END STARTER PROVIDED CODE
 
 
 
