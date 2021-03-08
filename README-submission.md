@@ -1,11 +1,19 @@
 # Password Generator
 
 # Usage
+
 This homework was desigend to be used a Password Generator. The user can input their character requirements and the generator will output a random set of characters. This capability will be showcased once the button "Generate Password" is clicked. 
 
-![Screenshot] (./images/Screenshot.PNG)
+![Screenshot.PNG](./images/Screenshot.PNG)
+
+
+
+Working website:
+
+https://jdroyko.github.io/passwordGen/
 
 ### Provided Requirements
+
 The sections 'User Story' and 'Acceptance Criteria' are derived from the README.md presented on the homework. 
 
 #### User Story
@@ -37,13 +45,14 @@ THEN a password is generated that matches the selected criteria
 WHEN the password is generated
 THEN the password is either displayed in an alert or written to the page
 ```
+
 # Process
 
 ## Using Character Set
 
 I used the character set from the link: https://www.w3schools.com/html/html_charset.asp to produce the random set of characters, upper and lower alphabet through the Math.Random command. 
 
-The Math.Random command assigned a number from 0-1 then manipulated that number to represent the range of characters, as required. Below is an excerpt code from the javascript that represents the explanation provided. 
+The "Math.Random"" command assigned a number from 0-1 then manipulated that number to represent the range of characters, as required. Below is an excerpt code from the javascript that represents the explanation provided. 
 
 ```
   if (upperCase === true) {
@@ -54,29 +63,29 @@ The Math.Random command assigned a number from 0-1 then manipulated that number 
     }
   }
 ```
+
 The symbols function does not use this because the character range in the Character Set is not consistent, and a cleaner code could be derived from listing the symbols as an array.
 
 ## Error feature
 
 Should the user not enter a valid number to set the character set, an error will prompt them to re-enter another number within the acceptable paramenters. 
 
-![setLenght Error] ("./image/setLengthError.PNG")
 
+
+![setLenghtError.PNG](./images/setLenghtError.PNG)
 
 # Utilized Sources:
 
-https://www.youtube.com/watch?v=duNmhKgtcsI
+*JavaScript Password Generator* - https://www.youtube.com/watch?v=duNmhKgtcsI
 
-https://www.youtube.com/watch?v=iKo9pDKKHnc
+*Build A Password Generator With JavaScript -Tutorial* - https://www.youtube.com/watch?v=iKo9pDKKHnc
 
-https://dev.to/olawanle_joel/password-generator-with-javascript-57c
+*Password Generator with Javascript* - https://dev.to/olawanle_joel/password-generator-with-javascript-57c
 
-https://www.youtube.com/watch?v=9sT03jEwcaw
+*Random Password Generator Tutorial* - https://www.youtube.com/watch?v=9sT03jEwcaw
 
-https://www.youtube.com/watch?v=MW1wz-PAOaE
+*Create A Password Generator With JavaScript* - https://www.youtube.com/watch?v=MW1wz-PAOaE
 
-Generate characters to symbols, numbers, letters: 
-97-122 
-Represent letters of the alphabet and utilize Math.random
+*Study GroupMembers:* Joey Kouneski, Eric Cole, Ryan Scherr, Reginald Mace, Caitlin Bopp, Jashawn Stewart
 
-Study Group: Joey Kouneski, Eric Cole, Ryan Scherr, Reginald Mace, Caitlin Bopp, Jashawn Stewart
+*Tutor*: Kris Renaldi
