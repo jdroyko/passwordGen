@@ -4,7 +4,7 @@
 
 This homework was desigend to be used a Password Generator. The user can input their character requirements and the generator will output a random set of characters. This capability will be showcased once the button "Generate Password" is clicked. 
 
-![Screenshot.PNG](.Develop/images/Screenshot.PNG)
+![Screenshot.PNG](./images/Screenshot.PNG)
 
 
 
@@ -66,7 +66,7 @@ Should the user not enter a valid number to set the character set, an error will
 
 
 
-![setLenghtError.PNG](.Develop/images/setLenghtError.PNG)
+![setLenghtError.PNG](./images/setLenghtError.PNG)
 
 # Utilized Sources:
 
